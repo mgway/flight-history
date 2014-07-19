@@ -1,0 +1,25 @@
+{
+  "name": "flight-history",
+  "version": "0.0.1",
+  "authors": [
+    "Matthew Galloway <hello@matthewgalloway.com>"
+  ],
+  "description": "History management for Flight JS",
+  "main": "lib/flight-history.js",
+  "keywords": [
+    "flight-history", 
+    "flight"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "flight": ">=1.1.0"
+  }
+}
