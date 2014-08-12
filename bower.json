@@ -21,8 +21,5 @@
   ],
   "dependencies": {
     "flight": ">=1.1.0"
-  },
-  "devDependencies": {
-    "mocha-flight": "~0.3.0"
   }
 }
