@@ -1,5 +1,6 @@
-define(['flight-history'], function(History) {
+define(function(require) {
 
+    var History = require('flight-history');
     var intitialRoute = document.location.pathname;
 
     describe('flight-history', function() {
@@ -8,10 +9,10 @@ define(['flight-history'], function(History) {
 
           beforeEach(function() {
             var routes = {};
-            routes[intitialRoute] ='testDebug';
+            routes[intitialRoute] ='uiDebug';
 
             spy = sinon.spy();
-            $(document).on('testDebug', spy);
+            $(document).on('uiDebug', spy);
 
             this.component = (new History()).initialize(document, {
               routes: routes
@@ -22,7 +23,7 @@ define(['flight-history'], function(History) {
             this.component.teardown();
           });
 
-          it('should fire the testDebug event on load', function() {
+          it('should trigger <uiDebug>', function() {
             expect(spy.called).to.equal(true);
           });
 
@@ -35,7 +36,7 @@ define(['flight-history'], function(History) {
               routes: {
                 '/': 'uiIndex',
                 '/params/{x}/{y}/': 'uiWithParams',
-                '/debug.html': 'testDebug'
+                '/debug.html': 'uiDebug'
               }
             });
           });
@@ -58,7 +59,7 @@ define(['flight-history'], function(History) {
             expect(document.location.pathname).to.equal('/params/1/2/');
           });
 
-          it('should set the URL to </debug.html> on <testDebug>', function() {
+          it('should set the URL to </debug.html> on <uiDebug>', function() {
             this.component.trigger('testDebug');
             expect(document.location.pathname).to.equal('/debug.html');
           });
@@ -104,11 +105,11 @@ define(['flight-history'], function(History) {
               expect(spy.called).to.equal(true);
             });
 
-            it('should set the <x> param', function() {
+            it('should return the <x> param', function() {
               expect(spy.args[0][1].x).to.equal('1');
             });
 
-            it('should set the <y> param', function() {
+            it('should return the <y> param', function() {
               expect(spy.args[0][1].y).to.equal('2');
             });
           });
