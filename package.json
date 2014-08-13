@@ -11,7 +11,7 @@
     "flight"
   ],
   "scripts": {
-    "test": "karma start --single-run --browsers Chrome",
+    "test": "karma start --single-run --browsers Chrome"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,7 @@
     "karma-sinon": "^1.0.3",
     "karma-spec-reporter": "0.0.13",
     "mocha": "^1.21.4",
+    "requirejs": "^2.1.14",
     "sinon": "^1.10.3"
   }
 }
