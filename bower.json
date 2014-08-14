@@ -7,7 +7,7 @@
   "description": "History management for Flight JS",
   "main": "lib/flight-history.js",
   "keywords": [
-    "flight-history", 
+    "flight-history",
     "flight"
   ],
   "license": "MIT",
